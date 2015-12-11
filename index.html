@@ -41,7 +41,7 @@
                         <div class="right displayinline">
                             <div class="displayblock">
                                 <a alt="fb-icon" href=""><img src="img/facebooklogo.png"></a>
-                                <a alt="twitter-icon" href=""><img src="img/twitterlogo.png"></a>
+                                <a class="popup" alt="twitter-icon" href="https://twitter.com/share?text=I%20Want%20This"><img src="img/twitterlogo.png"></a>
                             </div>
                             <div class="displayblock">
                                 <img src="img/hintarrow.png"> 
@@ -176,6 +176,25 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+        <!-- Twitter tweet button -->
+        <script>
+            $('.popup').click(function () {
+                var width  = 575,
+                    height = 400,
+                    left   = ($(window).width()  - width)  / 2,
+                    top    = ($(window).height() - height) / 2,
+                    url    = this.href,
+                    opts   = 'status=1' +
+                             ',width='  + width  +
+                             ',height=' + height +
+                             ',top='    + top    +
+                             ',left='   + left;
+
+                window.open(url, 'twitter', opts);
+
+                return false;
+            });
         </script>
     </body>
 </html>
