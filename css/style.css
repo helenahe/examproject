@@ -1,0 +1,113 @@
+h1, h2, h3, h5, p, a {
+    color: #f2f2f0;
+    
+}
+
+h1 {
+    margin-top: 150px;
+    font-size: 80px;
+}
+
+h3 {
+    font-weight: 200;
+}
+h4 {
+    color: #4f764a;
+    margin: 15px 15px 15px 15px;
+    font-weight: 200;
+}
+
+a {
+    color: #f2f2f0;
+}
+
+.hinttext {
+
+}
+
+ul {
+    color: #e29d39;
+    border-top: 2px solid #e29d39;
+   border-bottom: 2px solid #e29d39;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 30px;
+    margin: 20px 10px 5px 10px;
+}
+
+
+body {
+background-image: url("Treesbackground.png");
+
+background-repeat: no-repeat;
+   
+background-attachment: fixed;
+background-size: cover;
+}
+
+.topbar {
+    height: 75px;
+    background-color: black;
+}
+
+.logo {
+    height: 70px;
+    margin: 5px 0 5px 0;
+}
+
+.marginbottom10percent {
+    margin-bottom: 10%;
+}
+
+.playlist{
+    height: 500px;
+    background-color: #7c2836;
+    
+}
+.rowforicons {
+  
+    background-color: #384b47;
+}
+.center {
+    text-align: center;
+}
+.right {
+    float:right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.displayinline {
+    display: inline-block;
+}
+.displayblock{
+    display: block;
+
+}
+.spaceaboveanimals {
+    margin-top: 50px;
+}
+
+
+.box{
+    
+    width: 230px;
+    background-color: #f2f2f0;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+.redbutton {
+    border-radius: 30px;
+    background-color: #df3341;
+    width: 150px;
+    color: #f2f2f0;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+* {
+border: solid red 1px;
+
+}
+
