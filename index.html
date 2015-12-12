@@ -40,8 +40,8 @@
                         </div>
                         <div class="right displayinline">
                             <div class="displayblock">
-                                <a alt="fb-icon" href=""><img src="img/facebooklogo.png"></a>
-                                <a class="popup" alt="twitter-icon" href="https://twitter.com/share?text=I%20Want%20This"><img src="img/twitterlogo.png"></a>
+                                <a class="fb-popup" alt="fb-icon" href=""><img src="img/facebooklogo.png"></a>
+                                <a class="twitter-popup" alt="twitter-icon" href="https://twitter.com/share?text=Santa%20please%20give%20me%20Spotify%20Premium%20for%20Christmas%20%23spotify%20%23wishlist"><img src="img/twitterlogo.png"></a>
                             </div>
                             <div class="displayblock">
                                 <img src="img/hintarrow.png"> 
@@ -178,9 +178,9 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
-        <!-- Twitter tweet button -->
+        <!-- Share buttons -->
         <script>
-            $('.popup').click(function () {
+            $('.twitter-popup').click(function () {
                 var width  = 575,
                     height = 400,
                     left   = ($(window).width()  - width)  / 2,
@@ -196,6 +196,30 @@
 
                 return false;
             });
+            $('.fb-popup').click(function () {
+                FB.ui({
+                    method: 'share',
+                    href: 'https://developers.facebook.com/docs/',
+                }, function(response){});
+            });
+        </script>
+        <!-- Facebook SDK -->
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId: '1488676114775287',
+                    xfbml: true,
+                    version: 'v2.5'
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "http://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
     </body>
 </html>
