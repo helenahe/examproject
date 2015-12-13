@@ -1,8 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "spotifyuser";
-$password = "spotify";
-$dbname = "spotify";
+
+include 'db.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
