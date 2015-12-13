@@ -34,7 +34,11 @@ ul {
     padding-left: 30px;
     margin: 20px 10px 5px 10px;
 }
-
+.nopadding {
+    padding-left: 0px;
+    padding-right: 0px;
+    a
+}
 
 body {
 background-image: url("Treesbackground.png");
@@ -48,7 +52,7 @@ background-size: cover;
 .topbar {
     height: 75px;
     background-color: black;
-}
+} 
 
 .logo {
     height: 70px;
@@ -60,10 +64,18 @@ background-size: cover;
 }
 
 .playlist{
-    height: 500px;
+    
     background-color: #7c2836;
     
 }
+
+.maxheightandwidth {
+    max-height: 66.6666%;
+}
+.maxheight33 {
+    max-height: 33.3333%;
+}
+
 .rowforicons {
   
     background-color: #384b47;

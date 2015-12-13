@@ -1,3 +1,18 @@
+<?php
+$servername = "localhost";
+$username = "spotifyuser";
+$password = "spotify";
+$dbname = "spotify";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+
+?>
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -54,13 +69,49 @@
                     
                 </div>
             </div>
-            <div class="row"> <!-- redbox and artists row -->
-                <div class="col-xs-12 col-md-6 playlist h1margin">
+            <div class="row playlist"> <!-- redbox and artists row -->
+                <div class="col-xs-12 col-md-6 h1margin">
                     <h2>Create a <br>personalized <br>playlist </h2>
                     <h3>Create a unique playlist as a <br> part of you christmas present <br> to your friends and family.</h3>
                 </div>
-                <div class="col-xs-12 col-md-6">
+                 <!--PHPHPHPHPPHPHP -->
+                 <div class="col-xs-12 col-md-6 nopadding"> 
+                    
+                        <?php 
+                           
+                            $sql = "SELECT * FROM artists LIMIT 5";
+                            $result = $conn->query($sql);
+                            $counter = 0;
+                            while ($row = $result->fetch_assoc()) { 
+                                $counter++; 
+                                if ($counter <= 2) {
+                               ?>
+                        <div class="col-xs-6 nopadding maxheightandwidth">
+                        <?php
+                            echo "<img src=artists/".$row["fileName"]." "."class='img-responsive maxheight250px'> </div>";
+                            } 
+                        else {
+                            ?>
+                                       
+                        <div class="col-xs-4 nopadding maxheight33">
+                        <?php
+                            echo "<img src=artists/";
+                            echo $row["fileName"];
+                            echo " ";
+                            echo "class='img-responsive maxheight250px'> </div>";
+                                    
+                            }
+                        
+                        }?>
+                        
+                        
+                           
+                          
+                                      
 
+                        
+                        
+                    </div>
                 </div>
             </div>
             <div class="row rowforicons"> <!-- For icons about Premium-->
@@ -223,3 +274,6 @@
         </script>
     </body>
 </html>
+<?php
+$conn->close();
+?>
