@@ -45,8 +45,8 @@ if ($conn->connect_error) {
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 marginbottom10percent"><!-- For Jumbotron-->
-                    <div class="displayinline">
+                <div class="col-xs-12 marginbottom5percent"><!-- For Jumbotron-->
+                    <div class="displayinline marginleft5">
                         <h1>Give music this <br> Christmas</h1>
                         <h3>Spotify Premium with a personalized playlist for your loved ones.<br> Choose between 4, 8 and 12 months subscription.</h3>
                         <a class="btn btn-default redbutton" href="#">GIVE</a>
@@ -68,9 +68,11 @@ if ($conn->connect_error) {
                 </div>
             </div>
             <div class="row playlist"> <!-- redbox and artists row -->
-                <div class="col-xs-12 col-md-6 h1margin">
-                    <h2>Create a <br>personalized <br>playlist </h2>
-                    <h3>Create a unique playlist as a <br> part of you christmas present <br> to your friends and family.</h3>
+                <div class="col-xs-12 col-md-6">
+                    <div class="marginleft5 paddingtopandbottom">
+                        <h2>Create a <br>personalized <br>playlist </h2>
+                        <h3>Create a unique playlist as a <br> part of you christmas present <br> to your friends and family.</h3>
+                    </div>
                 </div>
                  <!--PHPHPHPHPPHPHP -->
                  <div class="col-xs-12 col-md-6 nopadding"> 
@@ -103,19 +105,13 @@ if ($conn->connect_error) {
                         }?>
                         
                         
-                           
-                          
-                                      
-
-                        
-                        
                     </div>
                 </div>
             </div>
             <div class="row rowforicons"> <!-- For icons about Premium-->
                 
-                <div class="col-xs-12 center">
-                    <h3>The Benefits of Spotify Premium</h3>
+                <div class="col-xs-12 center marginbottom1percent">
+                    <h3>THE BENEFITS OF SPOTIFY PREMIUM</h3>
                 
                 </div>
                 
@@ -132,7 +128,7 @@ if ($conn->connect_error) {
                     <p>Download you music to listen to on the train, airplane or anywhere else.</p>
                 </div>
                 <div class="col-xs-12 col-md-3 center">
-                    <img alt="icon" src="img/Anysong.png">
+                    <img alt="icon" src="img/Anysong.png"> 
                     <h5>Play Any Song</h5>
                     <p>Just search for the music you love and hit play.</p>
                 </div>
