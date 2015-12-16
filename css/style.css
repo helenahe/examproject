@@ -228,3 +228,8 @@ width: 300px;
 .padding20px {
     padding-left: 40px;
 }
+
+.bottombar {
+    position: absolute;
+    bottom: 0px;
+}

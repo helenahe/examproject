@@ -1,6 +1,6 @@
 
             <div class="row">
-                <div class="col-xs-12 topbar">
+                <div class="col-xs-12 topbar bottombar">
                     <div class="margintop30px">
                     <p>Spotify 2015</p>
                     </div>
