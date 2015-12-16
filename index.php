@@ -254,7 +254,7 @@ if ($conn->connect_error) {
                     $('.fb-popup').click(function () {
                         FB.ui({
                             method: 'share',
-                            href: 'https://developers.facebook.com/docs/',
+                            href: 'http://46.101.42.17/SpotifyWeb/',
                         }, function(response){});
                     });
                 </script>
