@@ -46,12 +46,7 @@ if ($conn->connect_error) {
             </div>
             <div class="row">
                 <div class="col-xs-12 marginbottom5percent"><!-- For Jumbotron-->
-                    <div class="displayinline marginleft5">
-                        <h1>Give music this <br> Christmas</h1>
-                        <h3>Spotify Premium with a personalized playlist for your loved ones.<br> Choose between 4, 8 and 12 months subscription.</h3>
-                        <a class="btn btn-default redbutton" href="#">GIVE</a>
-                        </div>
-                        <div class="right displayinline">
+                    <div class="right displayinline">
                             <div class="displayblock">
                                 <a class="fb-popup" alt="fb-icon" href=""><img src="img/facebooklogo.png"></a>
                                 <a class="twitter-popup" alt="twitter-icon" href="https://twitter.com/share?text=Santa%20please%20give%20me%20Spotify%20Premium%20for%20Christmas%20%23spotify%20%23wishlist"><img src="img/twitterlogo.png"></a>
@@ -64,6 +59,11 @@ if ($conn->connect_error) {
                             </div>
                             
                         </div>
+                    <div class="displayinline marginleft5">
+                        <h1>Give music this <br> Christmas</h1>
+                        <h3>Spotify Premium with a personalized playlist for your loved ones.<br> Choose between 4, 8 and 12 months subscription.</h3>
+                        <a class="btn btn-default redbutton" href="#subscriptionways">GIVE</a>
+                    </div>
                     
                 </div>
             </div>
@@ -109,36 +109,39 @@ if ($conn->connect_error) {
                 </div>
             </div>
             <div class="row rowforicons"> <!-- For icons about Premium-->
-                
                 <div class="col-xs-12 center marginbottom1percent">
                     <h3>THE BENEFITS OF SPOTIFY PREMIUM</h3>
                 
                 </div>
-                
-                <div class="col-xs-12 col-md-3 center">
+                <?php 
+                           
+                            $sql2 = "SELECT * FROM benefits";
+                            $result2 = $conn->query($sql2);
+                            $counter = 0;
+                            while ($row = $result2->fetch_assoc()) { 
+                               ?>
+                        <div class="col-xs-12 col-md-3 center">
+                            
+                            <?php
+                                echo "<img src=img/".$row["img"].' class="center-block">';
+                             
+                        
+                            ?>
+                                 
+                            <h5> 
+                                <?php echo $row["headline"]; ?>     
+                            </h5>
+                            <p><?php echo $row["text"]; ?></p>
+                        </div>
+                        <?php
+                            
+                             }
+                        
+                            ?>
+                                       
+                        </div>
                     
-                    <img alt="icon" src="img/NoAds.png">
-                    <h5>Listen Without Ads</h5>
-                    <p>Party this holiday season with uninterupted music.</p>
-                </div>
-                <div class="col-xs-12 col-md-3 center">
-                    <img alt="icon" src="img/Wherever.png">
-        
-                    <h5>Listen Offline</h5>
-                    <p>Download you music to listen to on the train, airplane or anywhere else.</p>
-                </div>
-                <div class="col-xs-12 col-md-3 center">
-                    <img alt="icon" src="img/Anysong.png"> 
-                    <h5>Play Any Song</h5>
-                    <p>Just search for the music you love and hit play.</p>
-                </div>
-                <div class="col-xs-12 col-md-3 center">
-                    <img alt="icon" src="img/quality.png">
-                    <h5>Better Sound</h5>
-                    <p>Experience 3x better sound quality with Spotify Premium.</p>
-                </div>
-            </div>
-            <div class="row"> <!-- 4/8/12 MONTHS BOXES-->
+            <div class="row" id="subscriptionways"> <!-- 4/8/12 MONTHS BOXES-->
                 <div class="col-xs-12">
                 <h3 class="center"><b>Give</b> your friends and family the opportunity to have their <b>music</b> everywhere with <b>Spotify Premium</b></h3>
                 </div>
@@ -155,7 +158,7 @@ if ($conn->connect_error) {
                                 <li>High quality audio</li>
                                 <li>Play any track</li>
                             </ul>
-                            <a class="btn btn-default redbutton center-block" href="#">GIVE</a>
+                            <a class="btn btn-default redbutton center-block" href="buy.php?monthsurl=4">GIVE</a>
 
                         </div> 
                     </div>
@@ -175,7 +178,7 @@ if ($conn->connect_error) {
                                 <li>High quality audio</li>
                                 <li>Play any track</li>
                             </ul>
-                            <a class="btn btn-default redbutton center-block" href="#">GIVE</a>
+                            <a class="btn btn-default redbutton center-block" href="buy.php?monthsurl=8">GIVE</a>
                         </div>
                     </div>
                 </div>
@@ -194,7 +197,7 @@ if ($conn->connect_error) {
                                 <li>High quality audio</li>
                                 <li>Play any track</li>
                             </ul>
-                            <a class="btn btn-default redbutton center-block" href="#">GIVE</a>
+                            <a class="btn btn-default redbutton center-block" href="buy.php?monthsurl=12">GIVE</a>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,10 @@ h1, h2, h3, h5, p, a {
     color: #f2f2f0;
     
 }
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 h1 {
     margin-top: 160px;
@@ -23,7 +27,7 @@ a {
 }
 
 .hinttext {
-
+   
 }
 .marginleft5 {
         margin-left: 40px;
@@ -114,7 +118,6 @@ background-size: cover;
     margin-bottom: 0px;
 }
 
-
 .box{
     
     width: 230px;
@@ -124,6 +127,7 @@ background-size: cover;
     padding-top: 20px;
     box-shadow: 2px 2px 10px #626362;
 }
+
 .redbutton {
     border-radius: 30px;
     background-color: #df3341;
@@ -138,4 +142,18 @@ background-size: cover;
     color: #f2f2f0;
 }
 
+.boxsubscription{
+    
+    width: 70%;
+    background-color: #f2f2f0;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    box-shadow: 2px 2px 10px #626362;
+    height: auto;
+}
 
+
+.boxofchoosing{
+    outline: 1px solid red;
+}
