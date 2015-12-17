@@ -17,6 +17,7 @@ if ($conn->connect_error) {
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title> Spotify Christmas </title>
+        <link rel="icon" href="img/favicon.png">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -74,7 +75,7 @@ if ($conn->connect_error) {
             </div>
             <div class="row playlist"> <!-- redbox and artists row -->
                 <div class="col-xs-12 col-md-6">
-                    <div class="marginleft5 paddingtopandbottom">
+                    <div class="padding20px paddingtopandbottom">
                         <h2>Create a <br>personalized <br>playlist </h2>
                         <h3>Create a unique playlist as a <br> part of you christmas present <br> to your friends and family.</h3>
                     </div>
@@ -112,7 +113,7 @@ if ($conn->connect_error) {
                         
                     </div>
                 </div>
-            </div>
+            
             <div class="row rowforicons"> <!-- For icons about Premium-->
                 <div class="col-xs-12 center marginbottom1percent">
                     <h3>THE BENEFITS OF SPOTIFY PREMIUM</h3>
@@ -133,9 +134,9 @@ if ($conn->connect_error) {
                         
                             ?>
                                  
-                            <h5> 
+                            <h4 class="whitetext"> 
                                 <?php echo $row["headline"]; ?>     
-                            </h5>
+                            </h4>
                             <p><?php echo $row["text"]; ?></p>
                         </div>
                         <?php
@@ -148,7 +149,7 @@ if ($conn->connect_error) {
                     
             <div class="row" id="subscriptionways"> <!-- 4/8/12 MONTHS BOXES-->
                 <div class="col-xs-12">
-                <h3 class="center"><b>Give</b> your friends and family the opportunity to have their <b>music</b> everywhere with <b>Spotify Premium</b></h3>
+                <h3 class="center margintop30px"><b>Give</b> your friends and family the opportunity to have their <b>music</b> everywhere with <b>Spotify Premium</b></h3>
                 </div>
                 <div class="col-xs-12 col-md-4"> <!-- 4 Months -->
                     <div class="center-block">
@@ -210,7 +211,7 @@ if ($conn->connect_error) {
             <div class="row">
                 <div class="col-xs-12 topbar">
                     <div class="margintop30px padding20px">
-                    <p>Spotify 2015</p>
+                    <a href="https://www.spotify.com/dk/">Spotify 2015</a>
                     </div>
                 </div>
             </div>
@@ -226,13 +227,15 @@ if ($conn->connect_error) {
 
                 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
                 <script>
-                    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-                    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-                    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-                    e.src='https://www.google-analytics.com/analytics.js';
-                    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-                    ga('create','UA-71507810-1','auto');ga('send','pageview');
-                </script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71507810-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
                 <!-- Share buttons -->
                 <script>
                     $('.twitter-popup').click(function () {

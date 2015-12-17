@@ -2,7 +2,7 @@
             <div class="row">
                 <div class="col-xs-12 topbar bottombar">
                     <div class="margintop30px">
-                    <p>Spotify 2015</p>
+                    <a href="https://www.spotify.com/dk/">Spotify 2015</a>
                     </div>
                 </div>
             </div>
