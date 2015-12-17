@@ -23,7 +23,7 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            ga('create','UA-71507810-1','auto');ga('send','pageview');
         </script>
         <!-- Share buttons -->
         <script>
@@ -46,7 +46,7 @@
             $('.fb-popup').click(function () {
                 FB.ui({
                     method: 'share',
-                    href: 'https://developers.facebook.com/docs/',
+                    href: 'http://46.101.42.17/SpotifyWeb/',
                 }, function(response){});
             });
         </script>
