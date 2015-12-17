@@ -57,12 +57,12 @@ if ($conn->connect_error) {
                     
                       
                             <div class="col-xs-12 margintop30px">
-                                <a class="fb-popup right" alt="fb-icon" href=""><img src="img/facebooklogo.png"></a>
-                                <a class="twitter-popup right" alt="twitter-icon" href="https://twitter.com/share?text=Santa%20please%20give%20me%20Spotify%20Premium%20for%20Christmas%20%23spotify%20%23wishlist"><img src="img/twitterlogo.png"></a>
+                                <a class="fb-popup right" href=""><img src="img/facebooklogo.png"  alt="fb-icon"></a>
+                                <a class="twitter-popup right" href="https://twitter.com/share?text=Santa%20please%20give%20me%20Spotify%20Premium%20for%20Christmas%20%23spotify%20%23wishlist"><img src="img/twitterlogo.png" alt="twitter-icon"></a>
                         </div>
                         <div class="col-xs-12">
                             
-                                <img class="right arrowclass" src="img/hintarrow.png"> 
+                                <img class="right arrowclass" src="img/hintarrow.png" alt="arrow"> 
                             </div>
                             
                             <div class="col-xs-12">
@@ -94,7 +94,7 @@ if ($conn->connect_error) {
                                ?>
                         <div class="col-xs-6 nopadding maxheightandwidth">
                         <?php
-                            echo "<img src=artists/".$row["fileName"]." "."class='img-responsive maxheight250px'> </div>";
+                            echo "<img src=artists/".$row["fileName"]." "."class='img-responsive maxheight250px' alt='artist'> </div>";
                             } 
                         else {
                             ?>
@@ -104,7 +104,7 @@ if ($conn->connect_error) {
                             echo "<img src=artists/";
                             echo $row["fileName"];
                             echo " ";
-                            echo "class='img-responsive maxheight250px'> </div>";
+                            echo "class='img-responsive maxheight250px' alt='artist'> </div>";
                                     
                             }
                         
@@ -129,7 +129,7 @@ if ($conn->connect_error) {
                         <div class="col-xs-12 col-md-3 center">
                             
                             <?php
-                                echo "<img src=img/".$row["img"].' class="center-block">';
+                                echo "<img src=img/".$row["img"].' class="center-block" alt="icon">';
                              
                         
                             ?>
@@ -218,7 +218,8 @@ if ($conn->connect_error) {
             
             
             
-        </div>    
+        </div>
+            </div>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
                 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
                 <script src="js/plugins.js"></script>
